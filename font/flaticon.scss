@@ -1,0 +1,41 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?53a12d228e994be94be234c73186e558") format("truetype"),
+url("./flaticon.woff?53a12d228e994be94be234c73186e558") format("woff"),
+url("./flaticon.woff2?53a12d228e994be94be234c73186e558") format("woff2"),
+url("./flaticon.eot?53a12d228e994be94be234c73186e558#iefix") format("embedded-opentype"),
+url("./flaticon.svg?53a12d228e994be94be234c73186e558#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "man-boxing": "\f101",
+    "buddhist-yoga-pose": "\f102",
+    "skipping-rope": "\f103",
+    "bicycle": "\f104",
+);
+
+.flaticon-man-boxing:before {
+    content: map-get($flaticon-map, "man-boxing");
+}
+.flaticon-buddhist-yoga-pose:before {
+    content: map-get($flaticon-map, "buddhist-yoga-pose");
+}
+.flaticon-skipping-rope:before {
+    content: map-get($flaticon-map, "skipping-rope");
+}
+.flaticon-bicycle:before {
+    content: map-get($flaticon-map, "bicycle");
+}
